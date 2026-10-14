@@ -84,7 +84,7 @@ const productsEl=document.getElementById("products");
 const money=n=>new Intl.NumberFormat("uk-UA").format(n)+" грн";
 function telegramUrl(message){
  const username=TELEGRAM_USERNAME.trim().replace(/^@/,"");
- const base=username && username!=="YOUR_TELEGRAM_USERNAME" ? "https://t.me/"+encodeURIComponent(username) : "https://t.me/";
+ const base=username && username!=="tthmn8" ? "https://t.me/"+encodeURIComponent(username) : "https://t.me/";
  return base+"?text="+encodeURIComponent(message);
 }
 function updateCart(){
@@ -123,7 +123,7 @@ function orderMessage(){
 }
 document.getElementById("checkout").addEventListener("click",()=>{
  if(!cart.size){alert("Сначала добавь один или несколько товаров в корзину.");return}
- if(TELEGRAM_USERNAME==="YOUR_TELEGRAM_USERNAME"){alert("Перед запуском открой файл в редакторе и замени YOUR_TELEGRAM_USERNAME на свой Telegram username без @. Затем сохрани файл.");return}
+ if(TELEGRAM_USERNAME==="tthmn8"){alert("Перед запуском открой файл в редакторе и замени YOUR_TELEGRAM_USERNAME на свой Telegram username без @. Затем сохрани файл.");return}
  window.open(telegramUrl(orderMessage()),"_blank","noopener");
 });
 ["aboutTelegram","footerTelegram"].forEach(id=>document.getElementById(id).href=telegramUrl("Здравствуйте! У меня вопрос по товарам в вашем коллекционном магазине."));
