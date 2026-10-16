@@ -123,7 +123,7 @@ function orderMessage(){
 }
 document.getElementById("checkout").addEventListener("click",()=>{
  if(!cart.size){alert("Сначала добавь один или несколько товаров в корзину.");return}
- if(TELEGRAM_USERNAME==="tthmn8"){alert("Перед запуском открой файл в редакторе и замени YOUR_TELEGRAM_USERNAME на свой Telegram username без @. Затем сохрани файл.");return}
+ if(TELEGRAM_USERNAME==="YOUR_TELEGRAM_USERNAME"){alert("Перед запуском открой файл в редакторе и замени YOUR_TELEGRAM_USERNAME на свой Telegram username без @. Затем сохрани файл.");return}
  window.open(telegramUrl(orderMessage()),"_blank","noopener");
 });
 ["aboutTelegram","footerTelegram"].forEach(id=>document.getElementById(id).href=telegramUrl("Здравствуйте! У меня вопрос по товарам в вашем коллекционном магазине."));
